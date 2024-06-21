@@ -13,7 +13,7 @@ const Login = () => {
               Register
             </Link>
           </p>
-          <div className='bg-black/[0.05] text-white w-full py-4 mt-10 rounded-full transition-transform hover:bg-black/[0.8] active: scale-80 flex justify-center items-center gap-4 cursor-pointer'>
+          <div className='bg-black/[0.05] text-white w-full py-4 mt-10 rounded-full transition-transform hover:bg-black/[0.8] active:scale-80 flex justify-center items-center gap-4 cursor-pointer'>
             <FcGoogle size={22} />
             <span className='font-medium text-black group-hover:text-white'>
               Login with Google
