@@ -1,16 +1,16 @@
 import Link from 'next/link'
 import { FcGoogle } from 'react-icons/fc'
 
-const Register = () => {
+const Login = () => {
   return (
     <main className="flex lg:h-[100vh]">
       <div className="w-full lg:w-[60%] p-8 md:p-14 flex items-center justify-center lg:justify-start">
         <div className="p-8 w-[600px]">
-          <h1 className="text-6xl font-semibold">Sign Up</h1>
+          <h1 className="text-6xl font-semibold">Login</h1>
           <p className="mt-6 ml-1">
-            Already have an account?{' '}
-            <Link href={'/login'} className="underline hover:text-blue-400 cursor-pointer">
-              Login
+            Don't have an account?{' '}
+            <Link href={'/register'} className="underline hover:text-blue-400 cursor-pointer">
+              Register
             </Link>
           </p>
           <div className='bg-black/[0.05] text-white w-full py-4 mt-10 rounded-full transition-transform hover:bg-black/[0.8] active: scale-80 flex justify-center items-center gap-4 cursor-pointer'>
@@ -21,10 +21,6 @@ const Register = () => {
           </div>
           <form>
             <div className='mt-10 pl-1 flex flex-col'>
-              <label>Name</label>
-              <input type="text" className='font-medium border-b border-black p-4 outline-0 focus-within:border-blue-400' required />
-            </div>
-            <div className='mt-10 pl-1 flex flex-col'>
               <label>Email</label>
               <input type="email" className='font-medium border-b border-black p-4 outline-0 focus-within:border-blue-400' required />
             </div>
@@ -32,7 +28,7 @@ const Register = () => {
               <label>Password</label>
               <input type="password" className='font-medium border-b border-black p-4 outline-0 focus-within:border-blue-400' required />
             </div>
-            <button className='bg-black text-white w-44 py-4 mt-10 rounded-full transition-transform hover:bg-black/[0.8] active:scale-90'>Sign Up</button>
+            <button className='bg-black text-white w-44 py-4 mt-10 rounded-full transition-transform hover:bg-black/[0.8] active:scale-90'>Login</button>
           </form>
         </div>
       </div>
@@ -44,4 +40,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default Login
