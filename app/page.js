@@ -1,13 +1,30 @@
+'use client'
 import { GoSignOut } from 'react-icons/go'
 import { AiOutlinePlus } from "react-icons/ai"
 import { MdDeleteForever } from 'react-icons/md'
+import { auth } from '@/firebase/config'
+import { signOut } from 'firebase/auth'
 
 const arr = [1,2,3]
 
 export default function Home() {
+  const logout = async () => {
+    try {
+      await signOut(auth)
+      console.log('signed out!')
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <main>
-      <div className='bg-slate-600 text-white w-44 py-4 mt-5 rounded-lg transition-transform hover:bg-black/[0.8] active:scale-90 flex items-center justify-center gap-2 font-medium shadow-md fixed bottom-90 right-5 cursor-pointer'>
+
+      {/* sign out button */}
+      <div 
+        className='bg-slate-600 text-white w-44 py-4 mt-5 rounded-lg transition-transform hover:bg-black/[0.8] active:scale-90 flex items-center justify-center gap-2 font-medium shadow-md fixed bottom-90 right-5 cursor-pointer'
+        onClick={logout}
+      >
         <GoSignOut size={15} />
         <span>Logout</span>
       </div>
